@@ -22,7 +22,7 @@ Mean time to resolution was hovering around **45–60 minutes** for anything non
 ---
 
 ##  Architecture
-
+![Architecture](Architecture.png)
 
 | Component | Role |
 |---|---|
