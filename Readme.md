@@ -77,7 +77,7 @@ docker compose ps
 
 | Service | URL | Credentials |
 |---|---|---|
-| Grafana | `http://localhost:3000` | `admin / admin123` |
+| Grafana | `http://localhost:3000` | *** |
 | Prometheus | `http://localhost:9090` | — |
 | Alertmanager | `http://localhost:9093` | — |
 | Jaeger UI | `http://localhost:16686` | — |
