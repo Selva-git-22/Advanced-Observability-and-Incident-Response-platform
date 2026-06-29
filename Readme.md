@@ -85,11 +85,11 @@ docker compose ps
 | OpenSearch API | `http://localhost:9200` | — |
 | Node Exporter | `http://localhost:9100/metrics` | — |
 
-> ⚠️ Change the Grafana admin password before exposing this outside `localhost`.
+>  Change the Grafana admin password before exposing this outside `localhost`.
 
 ---
 
-## 📊 Metrics — Prometheus + Grafana
+##  Metrics — Prometheus + Grafana
 
 Prometheus scrapes your app's `/metrics` endpoint every `15s`. Node Exporter handles host-level metrics — CPU, memory, disk, network.
 
@@ -127,7 +127,7 @@ sum(rate(http_requests_total{status=~"5.."}[5m]))
 
 ---
 
-## 🪵 Logging - Fluent Bit + OpenSearch
+##  Logging - Fluent Bit + OpenSearch
 
 Fluent Bit tails Docker container logs and app log files, enriches them with `hostname` and `environment` metadata, and ships to OpenSearch. Logs are indexed into daily indices (`app-logs-YYYY.MM.DD`) and automatically deleted after **30 days** via an ISM lifecycle policy.
 
