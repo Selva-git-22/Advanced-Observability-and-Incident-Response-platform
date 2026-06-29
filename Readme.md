@@ -23,26 +23,6 @@ Mean time to resolution was hovering around **45–60 minutes** for anything non
 
 ##  Architecture
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                        YOUR APPLICATIONS                            │
-│         (Node.js / Python / Go Microservices)                       │
-└────────┬──────────────┬──────────────┬───────────────┬─────────────┘
-         │ Metrics      │ Logs         │ Traces        │ Alerts
-         ▼              ▼              ▼               ▼
-   ┌──────────┐   ┌──────────┐  ┌──────────┐   ┌──────────────┐
-   │Prometheus│   │Fluent Bit│  │  Jaeger  │   │Alertmanager  │
-   └────┬─────┘   └────┬─────┘  └────┬─────┘   └──────┬───────┘
-        │              │             │                  │
-        ▼              ▼             │           ┌──────▼──────┐
-   ┌──────────┐  ┌──────────────┐   │           │  Slack/SNS  │
-   │ Grafana  │  │  OpenSearch  │   │           └─────────────┘
-   └──────────┘  └──────────────┘   ▼
-                              ┌───────────┐
-                              │  Grafana  │
-                              │ Jaeger UI │
-                              └───────────┘
-```
 
 | Component | Role |
 |---|---|
