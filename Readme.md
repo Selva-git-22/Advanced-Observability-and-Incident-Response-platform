@@ -345,7 +345,3 @@ observability-platform/
 | Node Exporter | `1.7.0` |
 
 ---
-
-## 📄 License
-
-MIT
