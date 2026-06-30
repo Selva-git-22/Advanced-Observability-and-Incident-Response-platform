@@ -148,7 +148,7 @@ Core output block in `fluent-bit/fluent-bit.conf`:
 
 ##  Distributed Tracing:  Jaeger + OpenTelemetry
 
-Instrument once, get traces for everything — HTTP, Express, database calls, gRPC.
+Instrument once, get traces for everything like HTTP, Express, database calls, gRPC.
 
 **Node.js**
 
