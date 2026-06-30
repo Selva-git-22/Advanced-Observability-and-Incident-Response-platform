@@ -89,9 +89,9 @@ docker compose ps
 
 ---
 
-##  Metrics — Prometheus + Grafana
+##  Metrics:  Prometheus + Grafana
 
-Prometheus scrapes your app's `/metrics` endpoint every `15s`. Node Exporter handles host-level metrics — CPU, memory, disk, network.
+Prometheus scrapes your app's `/metrics` endpoint every `15s`. Node Exporter handles host-level metrics - CPU, memory, disk, network.
 
 **CPU usage %**
 
@@ -146,7 +146,7 @@ Core output block in `fluent-bit/fluent-bit.conf`:
 
 ---
 
-##  Distributed Tracing - Jaeger + OpenTelemetry
+##  Distributed Tracing:  Jaeger + OpenTelemetry
 
 Instrument once, get traces for everything — HTTP, Express, database calls, gRPC.
 
@@ -180,7 +180,7 @@ class TraceIdFilter(logging.Filter):
 
 ---
 
-##  Alerting - Alertmanager
+##  Alerting:  Alertmanager
 
 The problem with our old alerting wasn't the tooling - alerts fired too late and went to everyone, so they were effectively ignored. Rebuilt it around three principles:
 
@@ -221,7 +221,7 @@ Instead of alerting after breaching the error budget, the burn rate alert fires 
 
 ---
 
-##  Auto-Remediation — AWS Lambda
+##  Auto-Remediation: AWS Lambda
 
 Two Lambda functions handle the most common failure patterns automatically:
 
@@ -324,7 +324,7 @@ observability-platform/
 ##  Before Going to Production
 
 -  Change the Grafana admin password (`GF_SECURITY_ADMIN_PASSWORD`)
--  Enable OpenSearch TLS — `plugins.security.disabled=true` is for local dev only
+-  Enable OpenSearch TLS - `plugins.security.disabled=true` is for local dev only
 -  Add your Slack webhook URL to `alertmanager/alertmanager.yml`
 -  Swap Jaeger `badger` storage to OpenSearch for production (`SPAN_STORAGE_TYPE=elasticsearch`)
 -  Tighten Lambda IAM roles to least privilege
